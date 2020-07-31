@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinning Wheel</title>
+
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        window.addEventListener('load', event => {
+            document.querySelector('body').classList.add('loaded')
+        });
+    </script>
+</head>
+
+<body>
+    <article class="condition">
+      <h1>Условие на играта:</h1>
+      <p class="task">Идеята на колелото е много проста. Колелото се състои от 18 сектора. 
+        Една игра се състои от 10 завъртания. Условието е, в рамките на тези 10 завъртания, 
+        един от секторите да се падне точно 3 пъти, втори сектор да се падне точно 2 пъти, а останалите 
+        сектори да са различни неповтаряеми. Също така, няма как да се паднат 2 пъти под ред един и същи сектор. 
+        При завършване на играта се появява бутон NEW GAME, след което започвате нова игра.</p>
+      <hr>
+      <br>
+    </article>
+    <div id="app">
+        <img class="stop" src="{{ site.baseurl }}/images/stop.png" />
+        <img class="wheel" src="{{ site.baseurl }}/images/wheel1.png" />
+       <button class="btnStart"> START </button>
+       <button class="btnNewGame"> NEW GAME </button>
+    </div>
+
+    <h2>При 10 последователни завъртания, ще се паднат тази поредица от числа:<span class="digits"></span></h2>
+    <h2>Числото, което ще се падне е:    <span class="number"></span></h2>
+    <br>
+    <hr>
+      <p class="info">Copyrigh &copy2020 All rights reserved | Made by <a href="https://angelbwd.github.io/It-s_Me" target="_blank">Angel Beshirov</a></p>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/spinningWheel.js"></script>
+
+</body>
+
+</html>
